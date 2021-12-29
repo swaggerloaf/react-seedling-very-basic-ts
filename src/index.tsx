@@ -1,4 +1,9 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import React from "react";
+import ReactDOM from "react-dom";
 
-ReactDOM.render(<div>Glenn</div>, document.getElementById("root"));
+import "./styles.scss";
+
+ReactDOM.render(
+  <div className="text-danger">Glenn</div>,
+  document.getElementById("root")
+);
