@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import "./styles.scss";
+const rootElement = document.getElementById("root");
 
-ReactDOM.render(
-  <div className="text-danger">Glenn</div>,
-  document.getElementById("root")
-);
+const root = ReactDOM.createRoot(rootElement);
+root.render(<div>Glenn</div>);
+
+//ReactDOM.render(<div>Glenn</div>, rootElement);

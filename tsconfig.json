@@ -1,4 +1,5 @@
 {
+  "include": ["src/index.tsx"],
   "compilerOptions": {
     "jsx": "react",
     "module": "commonjs",
@@ -8,7 +9,7 @@
     "removeComments": true,
     "sourceMap": true,
     "target": "es6",
-    "esModuleInterop": true
-  },
-  "include": ["src/index.tsx"]
+    "esModuleInterop": true,
+    "types": ["react/next", "react-dom/next"]
+  }
 }
