@@ -5,7 +5,7 @@ import './styles.scss';
 
 class Square extends React.Component {
   render() {
-    return <button className="square">{/* toto */}</button>;
+    return <button className="btn btn-danger square">{/* toto */}</button>;
   }
 }
 
