@@ -1,7 +1,16 @@
-import * as React from 'react';
+import React, { useReducer } from 'react';
 import * as ReactDOM from 'react-dom';
 
 import './styles.scss';
+
+interface Todo {
+  title: string;
+  description: string;
+}
+
+const todo: Partial<Todo> = {
+  title: 'Call Fred'
+};
 
 const initState = { count: 0 };
 
@@ -21,7 +30,7 @@ function reducer(state: typeof initState, action: ACTIONTYPE) {
 }
 
 function Counter() {
-  const [state, dispatch] = React.useReducer(reducer, initState);
+  const [state, dispatch] = useReducer(reducer, initState);
 
   return (
     <div className="text-danger">
@@ -33,7 +42,7 @@ function Counter() {
         -
       </button>
       <button
-        className="btn btn-warning btn-lg"
+        className="btn btn-primary btn-lg"
         onClick={() => dispatch({ type: 'increment', payload: 5 })}
       >
         +
